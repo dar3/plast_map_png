@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Tags 3 - Forms</title>
+</head>
+<body>
+    
+<form action="#" method="post" enctype="multipart/form-data">
+
+<div>
+    <p>Imię</p>
+    <input placeholder="Imię" tabindex="1"  type="text" name="username">
+</div>
+
+<div>
+    <p>Hasło</p>
+    <input placeholder="Hasło" tabindex="2" type="password" name="password">
+</div>
+
+<div>
+    <p>Numer telefonu</p>
+    <input placeholder="Numer telefonu" tabindex="3"  type="tel" name="tel_number">
+</div>
+
+<div>
+    <p>Płeć</p>
+    <input checked tabindex="4" type="radio" name="gender" value="male" > Mężczyzna
+</div>
+
+<div>
+    <input tabindex="4" type="radio" name="gender" value="female" > Kobieta
+</div>
+
+<div>
+    <p>Własność</p>
+    <input  tabindex="5" checked type="checkbox" name="bike" value="yes"> Rower
+</div>
+
+<div>
+    <input tabindex="6" type="checkbox" name="car" value="yes"> Samochód
+</div>
+
+<div>
+    <input tabindex="7" disabled type="checkbox" name="house" value="yes"> Mieszkanie
+</div>
+   
+
+<div>
+    <p>Informacje dodatkowe</p>
+    <textarea tabindex="8" name="add_info" ></textarea>
+</div>
+
+<div>
+    <p>Dodaj zdjęcie</p>
+    <input tabindex="9" type="file" name="userphoto">
+</div>
+
+
+<div>
+    <p>Ulubiony kolor</p>
+    <select tabindex="10" name="color" >
+        <option value="red">Czerwony</option>
+        <option value="green">Zielony</option>
+        <option selected value="blue">Niebieski</option>
+    </select>
+    
+</div>
+
+<div>
+    <p>Funkcje (Polecenia)</p>
+<!-- <input tabindex="11" type="submit" name="send" value=" Wyślij " >
+<input tabindex="12" type="reset" name="clear" value="Wyczyść"> -->
+
+<button tabindex="11" type="submit" name="send" > Wyślij </button>
+<button tabindex="12" type="reset" name="clear" > Wyczyść</button>
+</div>
+
+
+</form>
+
+    
+</body>
+</html>
