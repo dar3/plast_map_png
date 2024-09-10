@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+<!-- Leaflet_CSS -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+
+     <!-- Leaflet_JS_file -->
+
+     <!-- Make sure you put this AFTER Leaflet's CSS -->
+ <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+ integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+ crossorigin="">
+</script>
+
+ <style>
+    #map { height: 250px; }
+    /* #map { height: 500px; } */
+ </style>
+
+    <title>Plast Poland OpenStreetMap</title>
+</head>
+<body>
+    
+    <div id="map"></div>
+
+    <script>
+var map = L.map('map').setView([51.9194, 19.1451], 5);
+var marker = L.marker([53.133056692838935, 23.166767845019603]).addTo(map); //Bialystok
+var marker2 = L.marker([52.2297, 21.0122]).addTo(map); //Warszawa
+var marker3 = L.marker([51.2509, 22.5747]).addTo(map); //Lublin
+var marker4 = L.marker([51.1093, 17.0386]).addTo(map); //Wroclaw
+var marker5 = L.marker([50.0647, 19.9450]).addTo(map); //Krakow
+var marker6 = L.marker([52.4057, 16.9313]).addTo(map); //Poznan
+var marker7 = L.marker([54.3520, 18.6466]).addTo(map); //Gdansk
+marker.bindPopup("<b>Пласт Білосток</b> <br>Sybiraków 2 <br>  <a href=https://www.facebook.com/plastpolshcha target=_blank>Facebook</a> <br> <a href=mailto:bialystok@plast.org.pl>bialystok@plast.org.pl</a>");
+marker2.bindPopup("<b>Пласт Варшава</b> <br> Lirowa 42 <br> <a href= https://www.facebook.com/plastwarszawa target=_blank>Facebook</a> <br> <a href=mailto:warszawa@plast.org.pl>warszawa@plast.org.pl</a>");
+marker3.bindPopup("<b>Пласт Люблін</b>  <br> Krakowskie Przedmieście 39 <br> <a href=https://www.facebook.com/profile.php?id=100068558264450 target=_blank>Facebook</a> <br> <a href=mailto:lublin@plast.org.pl>lublin@plast.org.pl</a>");
+marker4.bindPopup("<b>Пласт Вроцлав</b> <br> Ruska 46 <br> <a href= https://www.facebook.com/plast.wroclaw target=_blank>Facebook</a> <br> <a href=mailto:wroclaw@plast.org.pl>wroclaw@plast.org.pl</a>");
+marker5.bindPopup("<b>Пласт Краків</b>  <br> lorem 42 <br> <a href= https://www.facebook.com/PlastKRK target=_blank>Facebook</a> <br> <a href=mailto:krakow@plast.org.pl>krakow@plast.org.pl</a>");
+marker6.bindPopup("<b>Пласт Познань</b> <br> lorem ipsum 13 <br> <a href= https://www.facebook.com/plastpoznan target=_blank>Facebook</a> <br> <a href=mailto:poznan@plast.org.pl>poznan@plast.org.pl</a>");
+marker7.bindPopup("<b>Пласт Ґданськ</b> <br> plac Solidarności <br> <a href= https://www.facebook.com/plastgdansk target=_blank>Facebook</a> <br> <a href=mailto:gdansk@plast.org.pl>gdansk@plast.org.pl</a>");
+
+        
+
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+}).addTo(map);
+    </script>
+
+</body>
+</html>

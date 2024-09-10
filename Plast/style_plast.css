@@ -1,0 +1,87 @@
+/* Map container */
+
+.map-container {
+    position: relative;
+    width: 100%; /* Mapa zajmuje 100% szerokości rodzica */
+    padding-top: 75%; /* Proporcja szerokości do wysokości 4:3 (możesz zmienić w zależności od obrazu mapy) */
+    background-image: url('https://res.cloudinary.com/de04hkb7l/image/upload/v1684687192/images/points-map/poland_map_xzqnli.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Ustawienie pinezek na mapie */
+.popup {
+    position: absolute;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translate(-50%, -100%); /* Aby pinezka była nad danym punktem */
+}
+  
+/* The actual popup (appears on top) */
+.popup .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #908888;
+    color: #e8d1d1;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0; 
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+}
+  
+/* Popup arrow */
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+  
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+  
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+  
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+} 
+
+/* other css */
+
+h1{
+    color: green;
+    text-align: center;
+    margin-top: 50px; 
+}
+
+.map-container{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pin{
+    height: 20px;
+    width: 15px;
+}

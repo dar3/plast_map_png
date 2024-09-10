@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_plast.css">
+    <title>Plast Poland png/svg map</title>
+</head>
+<body>
+
+    <h1>Cities with Plast</h1>
+    
+    <div class="map-container">
+        <div class="map"></div> <!-- Ustawienie mapy jako tło w CSS -->
+        
+        <!-- Pin for Warsaw -->
+        <div class="popup" onclick="togglePopup('popupWarszawa')" style="top: 35%; left: 60%;">
+            <img class="pin" src="images/city_pin.png" alt="Pin Warszawa">
+            <span class="popuptext" id="popupWarszawa">
+                Пласт Варшава <br> Lirowa 42 <br> 
+                <a href="https://www.facebook.com/plastwarszawa" target="_blank">Facebook</a> <br> 
+                <a href="mailto:warszawa@plast.org.pl">warszawa@plast.org.pl</a>
+            </span>
+        </div>
+    </div>
+
+        <!-- Pin for Krakow -->
+        <div class="popup" onclick="togglePopup('popupKrakow')" style="top: 145%; left: 55%;">
+            <img class="pin" src="images/city_pin.png" alt="Pin Kraków">
+            <span class="popuptext" id="popupKrakow">
+                Пласт Краків <br> Lorem ipsum 42 <br> 
+                <a href="https://www.facebook.com/PlastKRK" target="_blank">Facebook</a> <br> 
+                <a href="mailto:krakow@plast.org.pl">krakow@plast.org.pl</a>
+            </span>
+        </div> 
+   
+
+
+    <!-- Pin for Gdansk -->
+    <div class="popup" onclick="togglePopup('popupGdansk')" style="top: 30%; left: 45%;">
+        <img class="pin" src="images/city_pin.png" alt="Pin Gdańsk">
+        <span class="popuptext" id="popupGdansk">
+            Пласт Ґданськ <br> plac Solidarności <br> 
+            <a href="https://www.facebook.com/plastgdansk" target="_blank">Facebook</a> <br> 
+            <a href="mailto:gdansk@plast.org.pl">gdansk@plast.org.pl</a>
+        </span>
+    </div> 
+
+
+<!-- Pin for Bialystok -->
+<div class="popup" onclick="togglePopup('popupBialystok')" style="top: 74%; left: 79%;">
+    <img class="pin" src="images/city_pin.png" alt="Pin Białystok">
+    <span class="popuptext" id="popupBialystok">
+        Пласт Білосток <br> Sybiraków 2 <br> 
+        <a href="https://www.facebook.com/plastbialystok" target="_blank">Facebook</a> <br> 
+        <a href="mailto:bialystok@plast.org.pl">bialystok@plast.org.pl</a>
+    </span>
+</div> 
+
+
+<!-- Pin for Lublin -->
+<div class="popup" onclick="togglePopup('popupLublin')" style="top: 110%; left: 74%;">
+    <img class="pin" src="images/city_pin.png" alt="Pin Lublin">
+    <span class="popuptext" id="popupLublin">
+        Пласт Люблін <br> Krakowskie Przedmieście 39 <br> 
+        <a href="https://www.facebook.com/profile.php?id=100068558264450" target="_blank">Facebook</a> <br> 
+        <a href="mailto:lublin@plast.org.pl">lublin@plast.org.pl</a>
+    </span>
+</div> 
+
+
+<!-- Pin for Wroclaw -->
+<div class="popup" onclick="togglePopup('popupWroclaw')" style="top: 118%; right: 64%;">
+    <img class="pin" src="images/city_pin.png" alt="Pin Wrocław">
+    <span class="popuptext" id="popupWroclaw">
+        Пласт Вроцлав <br> Ruska 46  <br> 
+        <a href="https://www.facebook.com/plast.wroclaw" target="_blank">Facebook</a> <br> 
+        <a href="mailto:wroclaw@plast.org.pl">wroclaw@plast.org.pl</a>
+    </span>
+</div> 
+
+<!-- Pin for Poznan -->
+<div class="popup" onclick="togglePopup('popupPoznan')" style="top: 80%; right: 67%;">
+    <img class="pin" src="images/city_pin.png" alt="Pin Poznań">
+    <span class="popuptext" id="popupPoznan">
+        Пласт Познань <br> Lorem ipsum 13  <br> 
+        <a href="https://www.facebook.com/plastpoznan" target="_blank">Facebook</a> <br> 
+        <a href="mailto:poznan@plast.org.pl">poznan@plast.org.pl</a>
+    </span>
+</div> 
+
+
+<script>
+    // Toggle function to show/hide popups based on id
+    function togglePopup(popupId) {
+        // Zamyka wszystkie popupy przed otwarciem nowego
+        closeAllPopups();
+        
+        var popup = document.getElementById(popupId);
+        popup.classList.toggle("show");
+    }
+
+    // Zamyka wszystkie otwarte popupy
+    function closeAllPopups() {
+        var popups = document.querySelectorAll('.popuptext');
+        popups.forEach(function(popup) {
+            popup.classList.remove('show');
+        });
+    }
+
+    // Zamyka popup po kliknięciu w dowolne miejsce poza popupami
+    document.addEventListener('click', function(event) {
+        // Sprawdza, czy kliknięcie nie było wewnątrz popupa
+        if (!event.target.closest('.popup')) {
+            closeAllPopups();
+        }
+    });
+</script>
+
+
+</body>
+</html>
