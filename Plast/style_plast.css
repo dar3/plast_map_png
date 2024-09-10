@@ -2,22 +2,21 @@
 
 .map-container {
     position: relative;
-    width: 100%; /* Mapa zajmuje 100% szerokości rodzica */
-    padding-top: 75%; /* Proporcja szerokości do wysokości 4:3 (możesz zmienić w zależności od obrazu mapy) */
+    width: 100%; 
+    padding-top: 75%; 
     background-image: url('https://res.cloudinary.com/de04hkb7l/image/upload/v1684687192/images/points-map/poland_map_xzqnli.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
 }
 
-/* Ustawienie pinezek na mapie */
 .popup {
     position: absolute;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    transform: translate(-50%, -100%); /* Aby pinezka była nad danym punktem */
+    transform: translate(-50%, -100%); 
 }
   
 /* The actual popup (appears on top) */
